@@ -1,0 +1,48 @@
+let mapleader=','
+
+call plug#begin()
+
+" List your plugins here
+Plug 'tpope/vim-sensible'
+Plug 'fatih/vim-go'
+
+" Colors
+" Plug 'kronn/vim-colorschemes'
+Plug 'sainnhe/everforest'
+
+" Ale
+Plug 'dense-analysis/ale'
+
+" CoC
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'mfussenegger/nvim-jdtls'
+
+Plug 'fisadev/vim-isort'
+
+Plug 'andymass/vim-matchup'
+
+set background=dark
+call plug#end()
+
+so ~/.vim/ale.vim
+so ~/.vim/deletefile.vim
+so ~/.vim/coc.vim
+so ~/.vim/reledit.vim
+so ~/.vim/python.vim
+
+colorscheme everforest
+set shiftwidth=2
+set tabstop=2
+set et
+set number
+
+set statusline="%f%m%r%h%w [%Y] [0x%02.2B]%< %F%=%4v,%4l %3p%% of %L"
+autocmd BufWritePre *.py :%s/\s\+$//e
+autocmd BufWritePre *.yml :%s/\s\+$//e
+autocmd BufWritePre *.toml :%s/\s\+$//e
+set listchars=trail:-
+
+" $HOME/.vimrc
+set directory=$HOME/.vim/swapfiles//
+
+set t_BE=
