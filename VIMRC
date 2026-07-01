@@ -43,6 +43,6 @@ autocmd BufWritePre *.toml :%s/\s\+$//e
 set listchars=trail:-
 
 " $HOME/.vimrc
-set directory=$HOME/.vim/swapfiles//
+set directory=$HOME/.vim/swapfiles/
 
 set t_BE=
